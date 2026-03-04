@@ -106,28 +106,30 @@
       <div class="container">
         <div class="section-title">
           <p>Community Input</p>
-          <h2>Suggestions Tab</h2>
+          <h2>Suggestions</h2>
         </div>
-        <form class="suggestions-form" action="#" method="post">
+        <form class="suggestions-form" id="suggestions-form" action="#" method="post">
           <label for="suggestion-name">Name</label>
-          <input id="suggestion-name" name="name" type="text" placeholder="Your name" />
+          <input id="suggestion-name" name="name" type="text" placeholder="Your name" required />
 
           <label for="suggestion-email">Email</label>
-          <input id="suggestion-email" name="email" type="email" placeholder="you@example.com" />
+          <input id="suggestion-email" name="email" type="email" placeholder="you@example.com" required />
 
           <label for="suggestion-type">Suggestion Type</label>
-          <select id="suggestion-type" name="type">
-            <option>Game Idea</option>
-            <option>Feature Request</option>
-            <option>Bug / UX Feedback</option>
-            <option>Community Event</option>
+          <select id="suggestion-type" name="type" required>
+            <option value="" selected disabled>Select a category</option>
+            <option value="game-idea">Game Idea</option>
+            <option value="feature-request">Feature Request</option>
+            <option value="bug-ux-feedback">Bug / UX Feedback</option>
+            <option value="community-event">Community Event</option>
           </select>
 
           <label for="suggestion-message">Your Suggestion</label>
-          <textarea id="suggestion-message" name="message" rows="5" placeholder="Tell Shadow Forge what you'd like to see next."></textarea>
+          <textarea id="suggestion-message" name="message" rows="5" placeholder="Tell Shadow Forge what you'd like to see next." required></textarea>
 
           <button class="btn-primary" type="submit">Submit Suggestion</button>
         </form>
+        <p class="suggestions-note" id="suggestions-note" aria-live="polite">We read every suggestion from the Forge community.</p>
       </div>
     </section>
 
@@ -166,6 +168,15 @@
         const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         setTheme(next);
         localStorage.setItem(storageKey, next);
+      });
+
+      const form = document.getElementById('suggestions-form');
+      const note = document.getElementById('suggestions-note');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        note.textContent = 'Thanks! Your suggestion has been recorded for the Shadow Forge team.';
+        form.reset();
       });
     })();
   </script>
