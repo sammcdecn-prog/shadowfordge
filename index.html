@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow Forge | Games in Development</title>
+  <meta name="description" content="Shadow Forge is an independent game company building new and upcoming titles for Steam, mobile, and Unreal Engine-powered experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav container">
+      <div class="brand">SHADOW <span>FORGE</span></div>
+      <div class="nav-links">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark and light mode">☀️ Light Mode</button>
+        <a class="cta" href="#games">View Games</a>
+        <a class="cta" href="#suggestions">Suggestions</a>
+        <a class="cta cta-discord" href="https://discord.gg/9wCuND36" target="_blank" rel="noopener noreferrer">Discord</a>
+      </div>
+    </nav>
+    <div class="hero-content container">
+      <p class="eyebrow">Indie Game Studio</p>
+      <h1>Crafting dark worlds for <span>Steam</span>, <span>Mobile</span>, and <span>Unreal Engine</span>.</h1>
+      <p class="lead">
+        Shadow Forge is building atmospheric action adventures and multiplayer experiences with bold art direction and high replay value.
+      </p>
+      <div class="hero-buttons">
+        <a class="btn-primary" href="#upcoming">Upcoming Releases</a>
+        <a class="btn-secondary" href="https://discord.gg/9wCuND36" target="_blank" rel="noopener noreferrer">Join Discord</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container" id="games">
+      <div class="section-title">
+        <p>New Games</p>
+        <h2>Now in active development</h2>
+      </div>
+      <div class="card-grid">
+        <article class="game-card">
+          <div class="badge">Steam + Unreal Engine 5</div>
+          <h3>Emberfall: Requiem</h3>
+          <p>A cinematic rogue-lite where you forge cursed weapons and descend into a city consumed by living fire.</p>
+          <ul>
+            <li>Co-op dungeons for up to 4 players</li>
+            <li>Dynamic weather and destruction systems</li>
+            <li>Target launch: Q1 2027</li>
+          </ul>
+        </article>
+
+        <article class="game-card">
+          <div class="badge">Mobile (iOS + Android)</div>
+          <h3>Nightforge Tactics</h3>
+          <p>Fast, squad-based strategy battles with deep progression, seasonal PvP leagues, and bite-sized campaigns.</p>
+          <ul>
+            <li>3-minute tactical matches</li>
+            <li>Cross-save account progression</li>
+            <li>Target launch: Q4 2026</li>
+          </ul>
+        </article>
+
+        <article class="game-card">
+          <div class="badge">Steam (Early Access)</div>
+          <h3>Warden of Hollow Vale</h3>
+          <p>A base-building survival RPG set in a cursed valley where every night introduces new horrors.</p>
+          <ul>
+            <li>Procedural world events</li>
+            <li>Community-driven updates</li>
+            <li>Target launch: Q2 2026</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="upcoming">
+      <div class="container timeline-wrap">
+        <div class="section-title">
+          <p>Upcoming</p>
+          <h2>Roadmap to release</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span>2026</span>
+            <h4>Mobile Global Beta</h4>
+            <p>Nightforge Tactics enters open beta with live balancing and seasonal events.</p>
+          </div>
+          <div class="timeline-item">
+            <span>2026</span>
+            <h4>Steam Early Access</h4>
+            <p>Warden of Hollow Vale launches on Steam with monthly content drops.</p>
+          </div>
+          <div class="timeline-item">
+            <span>2027</span>
+            <h4>Flagship PC Launch</h4>
+            <p>Emberfall: Requiem releases with full co-op campaign and endgame raids.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="suggestions">
+      <div class="container">
+        <div class="section-title">
+          <p>Community Input</p>
+          <h2>Suggestions Tab</h2>
+        </div>
+        <form class="suggestions-form" action="#" method="post">
+          <label for="suggestion-name">Name</label>
+          <input id="suggestion-name" name="name" type="text" placeholder="Your name" />
+
+          <label for="suggestion-email">Email</label>
+          <input id="suggestion-email" name="email" type="email" placeholder="you@example.com" />
+
+          <label for="suggestion-type">Suggestion Type</label>
+          <select id="suggestion-type" name="type">
+            <option>Game Idea</option>
+            <option>Feature Request</option>
+            <option>Bug / UX Feedback</option>
+            <option>Community Event</option>
+          </select>
+
+          <label for="suggestion-message">Your Suggestion</label>
+          <textarea id="suggestion-message" name="message" rows="5" placeholder="Tell Shadow Forge what you'd like to see next."></textarea>
+
+          <button class="btn-primary" type="submit">Submit Suggestion</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section container" id="contact">
+      <div class="contact-box">
+        <h2>Join the Forge</h2>
+        <p>Follow development updates, playtests, and release announcements as we prepare for Steam and mobile launch windows.</p>
+        <div class="contact-actions">
+          <a href="mailto:hello@shadowforge.games" class="btn-primary">hello@shadowforge.games</a>
+          <a href="https://discord.gg/9wCuND36" target="_blank" rel="noopener noreferrer" class="btn-secondary">Discord Community</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Shadow Forge. All rights reserved.</p>
+  </footer>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.getElementById('theme-toggle');
+      const storageKey = 'shadowforge-theme';
+      const preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      const initial = localStorage.getItem(storageKey) || preferred;
+
+      function setTheme(theme) {
+        root.setAttribute('data-theme', theme);
+        toggle.textContent = theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+      }
+
+      setTheme(initial);
+
+      toggle.addEventListener('click', function () {
+        const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        setTheme(next);
+        localStorage.setItem(storageKey, next);
+      });
+    })();
+  </script>
+</body>
+</html>
